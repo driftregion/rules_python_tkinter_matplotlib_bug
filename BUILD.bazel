@@ -1,0 +1,14 @@
+load("@my_deps//:requirements.bzl", "requirement")
+
+py_binary(
+    name="test",
+    srcs = [
+        "test.py",
+    ],
+    deps = [
+        requirement("matplotlib"),
+    ],
+    imports = [".."],
+    visibility = ["//visibility:public"],
+)
+
